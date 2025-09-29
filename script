@@ -1,0 +1,11 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const courseButton = document.getElementById('courseButton');
+    const messageElement = document.getElementById('message');
+
+    const courses = ["INFM 109", "SDEV 120", "COMP 111"];
+
+    courseButton.addEventListener('click', function() {
+        const randomIndex = Math.floor(Math.random() * courses.length);
+        messageElement.textContent = courses[randomIndex];
+    });
+});
